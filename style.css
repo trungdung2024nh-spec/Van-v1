@@ -1,0 +1,929 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --brown: #654735;
+    --light-brown: #98745a;
+    --cream: #f6f0e5;
+    --paper: #fffdf8;
+    --text: #49382e;
+
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family: 'Be Vietnam Pro', sans-serif;
+
+    color: var(--text);
+
+    background:
+
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(155, 116, 83, .15),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 90% 90%,
+            rgba(155, 116, 83, .12),
+            transparent 30%
+        ),
+
+        var(--cream);
+
+}
+
+
+/* =========================
+   THANH MENU
+========================= */
+
+header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 100;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 16px 5%;
+
+    background: rgba(255, 253, 248, .88);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(100, 70, 45, .12);
+
+}
+
+
+.logo {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: var(--brown);
+
+}
+
+
+nav {
+
+    display: flex;
+
+    gap: 8px;
+
+}
+
+
+nav a {
+
+    text-decoration: none;
+
+    color: #725d4e;
+
+    padding: 9px 13px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    transition: .3s;
+
+}
+
+
+nav a:hover,
+nav a.active {
+
+    color: white;
+
+    background: var(--brown);
+
+}
+
+
+/* =========================
+   CHUNG
+========================= */
+
+main {
+
+    min-height: 100vh;
+
+    padding: 150px 7% 100px;
+
+}
+
+
+.label {
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    color: var(--light-brown);
+
+    margin-bottom: 18px;
+
+}
+
+
+h1,
+h2,
+h3 {
+
+    font-family: 'Playfair Display', serif;
+
+}
+
+
+.line {
+
+    width: 90px;
+
+    height: 2px;
+
+    background: var(--light-brown);
+
+    margin: 25px auto;
+
+}
+
+
+.page-number {
+
+    position: fixed;
+
+    right: 35px;
+
+    bottom: 25px;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    color: #8d7766;
+
+}
+
+
+/* =========================
+   TRANG CHỦ
+========================= */
+
+.home {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+.decoration {
+
+    font-family: Georgia, serif;
+
+    font-size: 75px;
+
+    height: 65px;
+
+    color: var(--light-brown);
+
+    animation: float 3s ease-in-out infinite;
+
+}
+
+
+.home h1 {
+
+    font-size: clamp(45px, 7vw, 85px);
+
+    line-height: 1.05;
+
+    color: var(--brown);
+
+}
+
+
+.home h1 span {
+
+    color: var(--light-brown);
+
+}
+
+
+.home h2 {
+
+    font-size: 25px;
+
+    font-weight: 400;
+
+}
+
+
+.information {
+
+    margin: 25px 0 35px;
+
+    line-height: 2;
+
+    color: #725d4e;
+
+}
+
+
+.main-button {
+
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: white;
+
+    background: var(--brown);
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    transition: .3s;
+
+}
+
+
+.main-button:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 25px rgba(70, 45, 30, .2);
+
+}
+
+
+/* =========================
+   THÀNH VIÊN
+========================= */
+
+.members-page {
+
+    text-align: center;
+
+}
+
+
+.members-page h1 {
+
+    font-size: clamp(45px, 6vw, 70px);
+
+    color: var(--brown);
+
+}
+
+
+.sub-title {
+
+    margin: 10px auto 45px;
+
+    color: #806c5c;
+
+}
+
+
+.member-grid {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.member-card {
+
+    position: relative;
+
+    padding: 25px 15px;
+
+    min-height: 145px;
+
+    background: rgba(255, 253, 248, .72);
+
+    border: 1px solid rgba(100, 70, 45, .12);
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 25px rgba(80, 55, 35, .06);
+
+    transition: .35s;
+
+}
+
+
+.member-card:hover {
+
+    transform: translateY(-8px);
+
+    background: white;
+
+    box-shadow: 0 15px 35px rgba(80, 55, 35, .13);
+
+}
+
+
+.member-card span {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: #e8dbcb;
+
+    color: var(--brown);
+
+    font-family: 'Playfair Display', serif;
+
+    font-weight: bold;
+
+}
+
+
+.member-card h3 {
+
+    margin: 12px 0 7px;
+
+    font-size: 18px;
+
+}
+
+
+.member-card p {
+
+    font-size: 12px;
+
+    color: #806c5c;
+
+}
+
+
+/* =========================
+   DÀN Ý
+========================= */
+
+.outline-page {
+
+    max-width: 1050px;
+
+    margin: auto;
+
+}
+
+
+.outline-page h1 {
+
+    font-size: clamp(45px, 6vw, 70px);
+
+    color: var(--brown);
+
+    margin-bottom: 45px;
+
+}
+
+
+.outline {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+
+}
+
+
+.outline-item {
+
+    display: flex;
+
+    gap: 30px;
+
+    align-items: flex-start;
+
+    padding: 30px;
+
+    background: rgba(255, 253, 248, .7);
+
+    border-left: 4px solid var(--light-brown);
+
+    border-radius: 5px 15px 15px 5px;
+
+    transition: .35s;
+
+}
+
+
+.outline-item:hover {
+
+    transform: translateX(8px);
+
+    background: white;
+
+}
+
+
+.outline-number {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 40px;
+
+    color: var(--light-brown);
+
+}
+
+
+.outline-item h2 {
+
+    font-size: 27px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.outline-item p {
+
+    line-height: 1.8;
+
+    color: #725f50;
+
+}
+
+
+.mini-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 15px;
+
+}
+
+
+.mini-list span {
+
+    padding: 7px 12px;
+
+    background: #eee4d6;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================
+   BÀI VĂN
+========================= */
+
+.essay-page {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+}
+
+
+.essay-page > h1 {
+
+    font-size: clamp(45px, 6vw, 70px);
+
+    color: var(--brown);
+
+    margin-bottom: 40px;
+
+}
+
+
+.essay-section {
+
+    margin-bottom: 45px;
+
+    padding: 35px;
+
+    background: rgba(255, 253, 248, .72);
+
+    border-radius: 5px 18px 18px 5px;
+
+    border-left: 4px solid var(--light-brown);
+
+    box-shadow: 0 10px 35px rgba(70, 45, 30, .06);
+
+}
+
+
+.section-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.section-title span {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 35px;
+
+    color: var(--light-brown);
+
+}
+
+
+.section-title h2 {
+
+    font-size: 32px;
+
+    color: var(--brown);
+
+}
+
+
+.essay-text {
+
+    line-height: 2;
+
+    color: #5e4e41;
+
+}
+
+
+.essay-text p {
+
+    margin-bottom: 15px;
+
+}
+
+
+.argument {
+
+    margin: 25px 0;
+
+    padding: 20px 25px;
+
+    background: rgba(238, 228, 214, .55);
+
+    border-radius: 12px;
+
+}
+
+
+.argument h3 {
+
+    color: var(--brown);
+
+    margin-bottom: 10px;
+
+    font-size: 21px;
+
+}
+
+
+.argument h3 span {
+
+    color: var(--light-brown);
+
+    margin-right: 10px;
+
+}
+
+
+.argument p {
+
+    line-height: 1.9;
+
+    color: #625246;
+
+}
+
+
+/* =========================
+   TRANG CẢM ƠN
+========================= */
+
+.goodbye {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+.big-flower {
+
+    font-size: 75px;
+
+    color: var(--light-brown);
+
+    animation: float 3s ease-in-out infinite;
+
+}
+
+
+.goodbye h1 {
+
+    font-size: clamp(45px, 7vw, 85px);
+
+    line-height: 1.05;
+
+    color: var(--brown);
+
+}
+
+
+.goodbye h1 span {
+
+    color: var(--light-brown);
+
+}
+
+
+.goodbye-text {
+
+    font-size: 19px;
+
+    color: #725e4e;
+
+    margin-bottom: 25px;
+
+}
+
+
+.quote {
+
+    max-width: 600px;
+
+    font-family: 'Playfair Display', serif;
+
+    font-style: italic;
+
+    color: #917764;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* =========================
+   HIỆU ỨNG
+========================= */
+
+.home > *,
+.members-page > *,
+.outline-page > *,
+.essay-page > *,
+.goodbye > * {
+
+    animation: appear .8s ease both;
+
+}
+
+
+@keyframes appear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+@keyframes float {
+
+    0%, 100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-10px);
+
+    }
+
+}
+
+
+/* =========================
+   ĐIỆN THOẠI
+========================= */
+
+@media (max-width: 900px) {
+
+    header {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+
+    nav {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+
+    main {
+
+        padding-top: 180px;
+
+    }
+
+
+    .member-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .logo {
+
+        font-size: 11px;
+
+        text-align: center;
+
+    }
+
+
+    nav a {
+
+        font-size: 11px;
+
+        padding: 7px 9px;
+
+    }
+
+
+    main {
+
+        padding: 180px 20px 80px;
+
+    }
+
+
+    .member-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 10px;
+
+    }
+
+
+    .member-card {
+
+        min-height: 130px;
+
+        padding: 18px 8px;
+
+    }
+
+
+    .member-card h3 {
+
+        font-size: 15px;
+
+    }
+
+
+    .outline-item {
+
+        padding: 22px;
+
+        gap: 15px;
+
+    }
+
+
+    .outline-number {
+
+        font-size: 30px;
+
+    }
+
+
+    .essay-section {
+
+        padding: 22px;
+
+    }
+
+
+    .section-title h2 {
+
+        font-size: 25px;
+
+    }
+
+
+    .essay-text,
+    .argument p {
+
+        font-size: 14px;
+
+    }
+
+}
